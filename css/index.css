@@ -13,21 +13,24 @@
 :root {
     --white-color: white;
     --black-color: black;
-    --red-color: red;
-    --blue-color: blue;
-    --blueish-color: #00acee;
-    --green-color: green;
-    --grey-color: grey;
+    --header-bgcolor: #00acee;
+    --progressbar-bgcolor: green;
+    --contact-bgcolor: #89cff0;
+    --projects-bgcolor: #FF91A4;
+
+    
+
+
 }
 
 .dark {
     --white-color: black;
     --black-color: white;
-    --red-color: red;
-    --blue-color: blue;
-    --blueish-color: #00acee;
-    --green-color: green;
-    --grey-color: grey;
+    --header-bgcolor: #400000;
+    --progressbar-bgcolor: red;
+    --contact-bgcolor: #1a3c7f;
+    --projects-bgcolor: #DA2C43;
+
 }
 
 h1 {
@@ -71,10 +74,10 @@ header {
     justify-content: space-between;
     width: 100%;
     height: 8vh;
-    position: fixed;
+    position: sticky;
     top: 0;
-    background-color: var(--black-color);
     z-index: 1000;
+    background-color: var(--header-bgcolor);
 }
 
 header .left {
@@ -82,7 +85,7 @@ header .left {
 }
 
 header .left a h1 {
-    color: var(--white-color);
+    color: white;
     cursor: pointer;
 }
 
@@ -94,7 +97,7 @@ header .middle nav ul {
 }
 
 header .middle nav ul li a {
-    color: var(--white-color);
+    color: white;
     padding: 3px 9px;
     font-weight: bold;
 }
@@ -105,10 +108,16 @@ header .right {
     align-items: center;
 }
 
-header .right .fa-sun, header .right .fa-moon {
-    color: var(--white-color);
+header .right .fa-sun {
+    color: white;
     cursor: pointer;
     font-size: 21px;
+}
+
+header .right .fa-moon {
+    color: white;
+    cursor: pointer;
+    font-size: 28px;
 }
 
 /* header end  */
@@ -126,13 +135,17 @@ header .right .fa-sun, header .right .fa-moon {
 .highlight {
     transition: width 0.5s linear;
     width: 0%;
-    background-color: var(--red-color);
+    background-color: var(--progressbar-bgcolor);
     height: 100%;
 }
 
 /* progress section bar end  */
 
-/* homw section start */
+/* home section start */
+
+/* #home {
+    height: 200vh;
+} */
 
 /* home section end */
 
@@ -142,116 +155,411 @@ header .right .fa-sun, header .right .fa-moon {
 
 /* skills section start */
 
+#skills {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 8vh 80px 20px;
+    width: 100%;
+    background-color: var(--white-color);
+}
+
+#skills .upper h1 {
+    text-align: center;
+    color: var(--black-color);
+}
+
+#skills .lower {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+#skills .lower .left,
+#skills .lower .right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#skills .lower .left .bar,
+#skills .lower .right .bar {
+    width: 100%;
+}
+
+#skills .lower .left p,
+#skills .lower .right p {
+    color: var(--black-color);
+}
+
+#skills .lower .left .bar .skill-bar,
+#skills .lower .right .bar .skill-bar {
+    text-align: right;
+    padding: 0 10px;
+    color: white;
+}
+
+.html,
+.css,
+.js,
+.php,
+.excel,
+.reactjs,
+.nextjs,
+.mysql,
+.project-management,
+.communication,
+.nodejs,
+.flutter,
+.creativity,
+.team-support {
+    width: 0;
+    border: 1px solid white;
+}
+
+.html.active {
+    width: 90%;
+    background-color: #04AA6D;
+    border: 1px solid black;
+    transition: all 2s ease-in-out;
+}
+
+.css.active {
+    width: 90%;
+    background-color: #2196F3;
+    border: 1px solid black;
+    transition: all 2s ease-in-out;
+}
+
+.js.active {
+    width: 75%;
+    transition: all 2s ease-in-out;
+    border: 1px solid black;
+    background-color: #f44336;
+}
+
+.php.active {
+    width: 70%;
+    transition: all 2s ease-in-out;
+    border: 1px solid black;
+    background-color: #6c78d7;
+}
+
+.mysql.active {
+    width: 80%;
+    background-color: #eac802;
+    border: 1px solid black;
+    transition: all 2s ease-in-out;
+}
+
+.reactjs.active {
+    width: 70%;
+    background-color: #f0595b;
+    border: 1px solid black;
+    transition: all 2s ease-in-out;
+}
+
+.nextjs.active {
+    width: 70%;
+    background-color: #a04873;
+    border: 1px solid black;
+    transition: all 2s ease-in-out;
+}
+
+.nodejs.active {
+    width: 5%;
+    background-color: #04AA6D;
+    border: 1px solid black;
+    transition: all 2s ease-in-out;
+}
+
+.flutter.active {
+    width: 20%;
+    background-color: #2196F3;
+    border: 1px solid black;
+    transition: all 2s ease-in-out;
+}
+
+.excel.active {
+    width: 75%;
+    transition: all 2s ease-in-out;
+    border: 1px solid black;
+    background-color: #f44336;
+}
+
+.communication.active {
+    width: 90%;
+    background-color: #6c78d7;
+    border: 1px solid black;
+    transition: all 2s ease-in-out;
+}
+
+.team-support.active {
+    width: 90%;
+    background-color: #eac802;
+    border: 1px solid black;
+    transition: all 2s ease-in-out;
+}
+
+.project-management.active {
+    width: 90%;
+    background-color: #f0595b;
+    border: 1px solid black;
+    transition: all 2s ease-in-out;
+}
+
+.creativity.active {
+    width: 80%;
+    background-color: #a04873;
+    border: 1px solid black;
+    transition: all 2s ease-in-out;
+}
+
 /* skills section end */
 
 /* projects section start */
 
+#projects {
+    padding: 8vh 80px 20px;
+    width: 100%;
+    background-color: var(--projects-bgcolor);
+}
+
+#projects h1 {
+    width: 100%;
+    text-align: center;
+    color: var(--black-color);
+}
+
+#projects .projectswiper {
+    width: 90%;
+    margin-top: 20px;
+}
+
+#projects .projectswiper .swiper-slide {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#projects .projectswiper .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#projects .projectswiper .swiper-slide .demo-link {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+}
+
+#projects .projectswiper .swiper-slide .demo-link a {
+padding: 10px 20px;
+background-color: black;
+border-radius: 10px;
+color: white;
+}
+
 /* projects section end */
 
 /* contact section start */
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 8vh 80px 20px;
+    background-color: var(--contact-bgcolor);
+}
+
+#contact h1,
+#contact h2 {
+    color: var(--black-color);
+}
+
+#contact .upper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+
+#contact .upper .left {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact .upper .left iframe {
+    width: 500px;
+    height: 350px;
+}
+
+#contact .upper .right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact .upper .right form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+}
+
+#contact .upper .right form label {
+    color: var(--black-color);
+}
+
+#contact .upper .right form input {
+    outline: none;
+    height: 30px;
+    border-radius: 8px;
+    padding: 5px 20px;
+    border: 1px solid var(--black-color);
+    background-color: var(--white-color);
+}
+
+#contact .upper .right form input::placeholder,
+#contact .upper .right form textarea::placeholder {
+    color: var(--black-color);
+}
+
+#contact .upper .right form input:focus,
+#contact .upper .right form textarea:focus {
+    outline: 1px solid var(--black-color);
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+
+#contact .upper .right form input:focus::placeholder,
+#contact .upper .right form textarea:focus::placeholder {
+    color: var(--white-color);
+}
+
+#contact .upper .right form textarea {
+    resize: none;
+    outline: none;
+    border: 1px solid var(--black-color);
+    border-radius: 8px;
+    padding: 5px 20px;
+    background-color: var(--white-color);
+}
+
+#contact .upper .right form button {
+    padding: 7px 0;
+    border-radius: 8px;
+    border: 1px solid var(--black-color);
+    cursor: pointer;
+    color: var(--black-color);
+    background-color: var(--white-color);
+}
+
+#contact .upper .right form button:hover {
+    background-color: #6c78d7;
+    color: white;
+}
+
+#contact .lower ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#contact .lower ul li a {
+    padding: 8px 10px;
+    border-radius: 50%;
+    color: white;
+}
+
+#contact .lower ul li:nth-child(1) a {
+    background-color: red;
+}
+
+#contact .lower ul li:nth-child(2) a {
+    background-color: blue;
+}
+
+#contact .lower ul li:nth-child(3) a {
+    background-color: #00acee;
+}
+
+#contact .lower ul li:nth-child(4) a {
+    background-color: #E5E4E2;
+    color: #0072b1;
+}
+
+#contact .lower ul li:nth-child(5) a {
+    background-color: #E5E4E2;
+    color: black;
+}
 
 /* contact section end */
 
 /* footer start */
 
 footer {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    width: 100%;
-}
-
-footer h1 {
-    color: var(--black-color);
+    background-color: var(--white-color);
+    text-align: center;
 }
 
 footer p {
     color: var(--black-color);
 }
 
-footer .upper {
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-    padding: 20px 80px;
-}
-
-footer .upper .left {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-footer .upper .right {
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-}
-
-footer .upper .left ul {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-
-footer .upper .left ul li a {
-    padding: 8px 10px;
-    border-radius: 50%;
-    color: var(--white-color);
-}
-
-footer .upper .left ul li:nth-child(1) a {
-    background-color: var(--red-color);
-}
-
-footer .upper .left ul li:nth-child(2) a {
-    background-color: var(--blue-color);
-}
-
-footer .upper .left ul li:nth-child(3) a {
-    background-color: var(--blueish-color);
-}
-
-footer .upper .left ul li:nth-child(4) a {
-    background-color: var(--green-color);
-}
-
-footer .upper .left ul li:nth-child(5) a {
-    background-color: var(--red-color);
-}
-
-footer .upper .right .footer-link {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-footer .upper .right .footer-link ul {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-footer .upper .right .footer-link ul li a {
-    color: var(--black-color);
-}
-
-footer .lower {
-    background-color: var(--black-color);
-    text-align: center;
-}
-
-footer .lower p {
-    color: var(--white-color);
-}
-
-footer .lower a {
-    color: var(--white-color);
+footer a {
+    color: red;
 }
 
 /* footer end */
+
+/* mobile-version section start */
+
+#mobile-version {
+    width: 100%;
+    padding-top: 1vh;
+    background-color: #400000;
+    position: sticky;
+    bottom: 0;
+    display: none;
+    z-index: 100;
+}
+
+#mobile-version ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+
+#mobile-version ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    font-size: 15px;
+}
+
+/* mobile-version section end */
 
 /* custom scrollbar start */
 
@@ -260,14 +568,14 @@ footer .lower a {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: var(--black-color);
+    background-color: var(--white-color);
 }
 
 ::-webkit-scrollbar-thumb {
     background-clip: content-box;
-    background-color: var(--blueish-color);
+    background-color: #00acee;
     border-radius: 4px;
-    border: 1px solid var(--blueish-color);
+    border: 1px solid #00acee;
 }
 
 /* custom scrollbar end */

@@ -1,8 +1,4 @@
-@media screen and (max-width:1350px) {
-
-
-
-}
+@media screen and (max-width:1350px) {}
 
 @media screen and (max-width:980px) {
 
@@ -27,25 +23,12 @@
         cursor: pointer;
     }
 
-    footer .upper {
-        flex-direction: column;
-        padding: 20px 30px;
-        align-items: center;
-    }
-
-    footer .upper .left {
-        width: 100%;
-    }
-
-    footer .upper .right {
-        width: 100%;
-    }
-
 }
 
 @media screen and (max-width:950px) {
 
-    header .right .fa-sun,header .right .fa-moon{
+    header .right .fa-sun,
+    header .right .fa-moon {
         display: block;
         font-size: 35px;
         color: white;
@@ -60,28 +43,104 @@
         margin-right: 44px;
     }
 
+    #projects {
+        padding: 8vh 30px 20px;
+    }
+
+    #projects .projectswiper {
+        width: 100%;
+    }
+
+    #projects .projectswiper .swiper-slide .demo-link {
+        bottom: 10px;
+    }
+
+    #contact {
+        padding: 8vh 30px 20px;
+    }
+
+    #contact .upper {
+        flex-direction: column;
+    }
+
+    #contact .upper .left {
+        width: 100%;
+    }
+
+    #contact .upper .right {
+        width: 100%;
+    }
+
+    #contact .upper .right form {
+        width: 100%;
+    }
+
+    #mobile-version {
+        display: block;
+    }
+
 }
 
 @media screen and (max-width:700px) {
 
-
-
-
-    footer .upper .right {
-        flex-direction: column;
+    #skills {
+        padding: 8vh 30px 20px;
     }
-    
+
+    #skills .lower {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #skills .lower .left,
+    #skills .lower .right {
+        width: 100%;
+    }
+
+    #projects .projectswiper .swiper-slide .demo-link a {
+        padding: 5px 10px;
+    }
+
 }
 
-@media screen and (max-width:560px) {
-
-
-}
 
 @media screen and (max-width:420px) {
 
     header .left {
         margin-left: 5px;
+    }
+
+    #contact .upper .left iframe {
+        width: 260px;
+        height: 250px;
+    }
+
+    #mobile-version ul li a {
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (max-width:350px) {
+
+    #projects .projectswiper .swiper-slide .demo-link {
+        bottom: 0px;
+        gap: 5px;
+    }
+}
+
+@media screen and (max-width:300px) {
+
+    #mobile-version ul li a {
+        font-size: 10px;
+    }
+
+}
+
+@media screen and (max-width:270px) {
+
+    #contact .upper .left iframe {
+        width: 200px;
     }
 
 }
