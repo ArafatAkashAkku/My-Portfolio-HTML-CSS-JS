@@ -2,14 +2,17 @@
 const navigationBar = document.getElementById('navigation-bar');
 const container = document.querySelector("body");
 const highlight = document.getElementById("bar-highlight");
+const mobileversion = document.getElementById("mobile-version");
 // windows scroll function 
 window.onscroll = () => {
     // scroll effect navbar
     if (scrollY > 80) {
         navigationBar.style.backgroundColor = "#400000";
+        mobileversion.style.backgroundColor = "#400000";
     }
     else {
         navigationBar.style.backgroundColor = "var(--header-bgcolor)";
+        mobileversion.style.backgroundColor = "var(--header-bgcolor)";
     }
     // scroll progress bar
     let cheight = container.offsetHeight - window.innerHeight;

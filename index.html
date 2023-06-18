@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +16,6 @@
     <!-- website title  -->
     <title>Md. Arafat Akash</title>
 </head>
-
 <body>
     <!-- header start -->
     <header id="navigation-bar">
@@ -43,26 +41,39 @@
         </div>
     </header>
     <!-- header end -->
-    <!-- progress bar section start  -->
-    <section>
-        <div class="progress">
-            <div class="highlight" id="bar-highlight"></div>
-        </div>
-    </section>
-    <!-- progress bar section end  -->
     <!-- main start  -->
     <main>
+        <!-- progress bar section start  -->
+        <section>
+            <div class="progress">
+                <div class="highlight" id="bar-highlight"></div>
+            </div>
+        </section>
+        <!-- progress bar section end  -->
         <!-- home section start  -->
         <section id="home">
-
+            <div class="left">
+                <h1>Hello! I am <br>Md. Arafat <span>Akash</span><br><span class="animation-text"></span></h1>
+                <p>This is my official portfolio website to showcase my all work related to web development.</p>
+                <div>
+                    <a href="#" download>Download CV</a>
+                </div>
+            </div>
+            <div class="right">
+                <img src="images/my-picture.png" alt="md. arafat akash">
+            </div>
         </section>
         <!-- home section end  -->
-
         <!-- about section end  -->
         <section id="about">
 
         </section>
         <!-- about section start  -->
+        <!-- education section end  -->
+        <section id="education">
+
+        </section>
+        <!-- education section start  -->
         <!-- skills section start  -->
         <section id="skills">
             <div class="upper">
@@ -132,14 +143,13 @@
             </div>
         </section>
         <!-- skills section end  -->
-
         <!-- projects section end  -->
         <section id="projects">
             <h1>My Projects</h1>
             <div class="swiper projectswiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="images/traditionalitalianfoodrestaurant.jpg">
+                        <img src="images/traditionalitalianfoodrestaurant.jpg" alt="traditionalitalianfoodrestaurant">
                         <div class="demo-link">
                             <a href="https://github.com/ArafatAkashAkku/Traditional-Italian-Food-Restaurant-HTML-CSS-JS"
                                 target="_blank">Github Link</a>
@@ -148,7 +158,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="images/creativeagency.jpg">
+                        <img src="images/creativeagency.jpg" alt="creativeagency">
                         <div class="demo-link">
                             <a href="https://github.com/ArafatAkashAkku/Creative-Agency-HTML-CSS-JS"
                                 target="_blank">Github Link</a>
@@ -156,7 +166,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="images/vaterinarybusiness.jpg">
+                        <img src="images/vaterinarybusiness.jpg" alt="vaterinarybusiness">
                         <div class="demo-link">
                             <a href="https://github.com/ArafatAkashAkku/Vaterinary-Business-HTML-BOOTSTRAP-JS"
                                 target="_blank">Github Link</a>
@@ -164,7 +174,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="images/perfumeworld.jpg">
+                        <img src="images/perfumeworld.jpg" alt="perfumeworld">
                         <div class="demo-link">
                             <a href="https://github.com/ArafatAkashAkku/Perfume-World-HTML-CSS-JS"
                                 target="_blank">Github Link</a>
@@ -172,7 +182,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="images/creativeagency.jpg">
+                        <img src="images/creativeagency.jpg" alt="creativeagency">
                         <div class="demo-link">
                             <a href="https://github.com/ArafatAkashAkku/My-Portfolio-HTML-CSS-JS" target="_blank">Github
                                 Link</a>
@@ -180,7 +190,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="images/onlineshoppingmanagementsystem.jpg">
+                        <img src="images/onlineshoppingmanagementsystem.jpg" alt="onlineshoppingmanagementsystem">
                         <div class="demo-link">
                             <a href="https://github.com/ArafatAkashAkku/Online-Shopping-Management-System"
                                 target="_blank">Github Link</a>
@@ -259,6 +269,9 @@
     <!-- mobile-version section  end  -->
     <!-- external js link  -->
     <script src="js/index.js"></script>
+    <!-- https://github.com/mattboldt/typed.js/ -->
+    <!-- animation typed js  -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <!-- swipper js  -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <!-- swipper js source code for swipper content  -->
@@ -274,6 +287,15 @@
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev"
             }
+        });
+    </script>
+    <!-- animation typed js  -->
+    <script>
+        var typed = new Typed('.animation-text', {
+            strings: ['A Web Developer', 'Front End Developer', 'React Developer', 'PHP Developer'],
+            typeSpeed: 100,
+            backSpeed: 50,
+            loop: true
         });
     </script>
 </body>
