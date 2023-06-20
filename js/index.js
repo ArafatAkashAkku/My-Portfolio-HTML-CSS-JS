@@ -3,16 +3,18 @@ const navigationBar = document.getElementById('navigation-bar');
 const container = document.querySelector("body");
 const highlight = document.getElementById("bar-highlight");
 const mobileversion = document.getElementById("mobile-version");
+const skills = document.getElementById("skills");
+const skillactive = document.querySelectorAll("#skills .lower .container .skill-box .skill-bar .skill-per");
 // windows scroll function 
 window.onscroll = () => {
     // scroll effect navbar
     if (scrollY > 80) {
-        navigationBar.style.backgroundColor = "#400000";
-        mobileversion.style.backgroundColor = "#400000";
+        navigationBar.style.backgroundColor = "var(--second-bg-color)";
+        mobileversion.style.backgroundColor = "var(--second-bg-color)";
     }
     else {
-        navigationBar.style.backgroundColor = "var(--header-bgcolor)";
-        mobileversion.style.backgroundColor = "var(--header-bgcolor)";
+        navigationBar.style.backgroundColor = "var(--bg-color)";
+        mobileversion.style.backgroundColor = "var(--bg-color)";
     }
     // scroll progress bar
     let cheight = container.offsetHeight - window.innerHeight;
@@ -24,35 +26,13 @@ window.onscroll = () => {
     // scroll skill bar 
     // if (skills.getBoundingClientRect().top + skills.getBoundingClientRect().height < window.innerHeight) {
     if (skills.getBoundingClientRect().top < window.innerHeight) {
-        html.classList.add("active");
-        css.classList.add("active");
-        js.classList.add("active");
-        php.classList.add("active");
-        excel.classList.add("active");
-        mysql.classList.add("active");
-        reactjs.classList.add("active");
-        nodejs.classList.add("active");
-        nextjs.classList.add("active");
-        flutter.classList.add("active");
-        communication.classList.add("active");
-        projectmanagement.classList.add("active");
-        teamsupport.classList.add("active");
-        creativity.classList.add("active");
+        skillactive.forEach((element)=>{
+            element.classList.add("active");
+        })
     } else {
-        html.classList.remove("active");
-        css.classList.remove("active");
-        js.classList.remove("active");
-        php.classList.remove("active");
-        excel.classList.remove("active");
-        mysql.classList.remove("active");
-        reactjs.classList.remove("active");
-        nodejs.classList.remove("active");
-        nextjs.classList.remove("active");
-        flutter.classList.remove("active");
-        communication.classList.remove("active");
-        projectmanagement.classList.remove("active");
-        teamsupport.classList.remove("active");
-        creativity.classList.remove("active");
+        skillactive.forEach((element)=>{
+            element.classList.remove("active");
+        })
     }
 }
 // navigation bar on click effect 
@@ -73,18 +53,3 @@ yearUpdate.innerHTML = new Date().getFullYear();
 document.oncontextmenu = (element) => {
     element.preventDefault();
 }
-//
-const html = document.querySelector(".html");
-const css = document.querySelector(".css");
-const js = document.querySelector(".js");
-const php = document.querySelector(".php");
-const excel = document.querySelector(".excel");
-const reactjs = document.querySelector(".reactjs");
-const nextjs = document.querySelector(".nextjs");
-const nodejs = document.querySelector(".nodejs");
-const communication = document.querySelector(".communication");
-const flutter = document.querySelector(".flutter");
-const projectmanagement = document.querySelector(".project-management");
-const creativity = document.querySelector(".creativity");
-const teamsupport = document.querySelector(".team-support");
-const mysql = document.querySelector(".mysql");

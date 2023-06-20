@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,17 +12,20 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <!-- font awesome cdn 6.3.0 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
-    <!-- Swiper CSS -->
+    <!-- swiper css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!-- animate on scroll css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- website title  -->
     <title>Md. Arafat Akash</title>
 </head>
+
 <body>
     <!-- header start -->
     <header id="navigation-bar">
         <div class="left">
             <a href="#home">
-                <h1>Md. Arafat Akash</h1>
+                <h1>Akash</h1>
             </a>
         </div>
         <div class="middle">
@@ -52,14 +56,14 @@
         <!-- progress bar section end  -->
         <!-- home section start  -->
         <section id="home">
-            <div class="left">
-                <h1>Hello! I am <br>Md. Arafat <span>Akash</span><br><span class="animation-text"></span></h1>
+            <div class="left" data-aos="fade-right" data-aos-duration="1000">
+                <h1>Hello! I am <br>Md. Arafat <span class="text-span">Akash</span><br><span class="animation-text text-span"></span></h1>
                 <p>This is my official portfolio website to showcase my all work related to web development.</p>
                 <div>
                     <a href="#" download>Download CV</a>
                 </div>
             </div>
-            <div class="right">
+            <div class="right" data-aos="fade-left" data-aos-duration="1000">
                 <img src="images/my-picture.png" alt="md. arafat akash">
             </div>
         </section>
@@ -76,68 +80,122 @@
         <!-- education section start  -->
         <!-- skills section start  -->
         <section id="skills">
-            <div class="upper">
-                <h1>My Skills</h1>
-            </div>
+            <h1 data-aos="fade-down" data-aos-duration="1000">My <span class="text-span">Skills</span></h1>
             <div class="lower">
-                <div class="left">
-                    <p>HTML</p>
-                    <div class="bar">
-                        <div class="skill-bar html">90%</div>
+                <div class="container" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="skill-box">
+                        <span class="title">HTML</span>
+                        <div class="skill-bar">
+                            <span class="skill-per html">
+                                <span class="tooltip">90%</span>
+                            </span>
+                        </div>
                     </div>
-                    <p>CSS</p>
-                    <div class="bar">
-                        <div class="skill-bar css">90%</div>
+                    <div class="skill-box">
+                        <span class="title">CSS</span>
+                        <div class="skill-bar">
+                            <span class="skill-per css">
+                                <span class="tooltip">90%</span>
+                            </span>
+                        </div>
                     </div>
-                    <p>JAVASCRIPT</p>
-                    <div class="bar">
-                        <div class="skill-bar js">75%</div>
+                    <div class="skill-box">
+                        <span class="title">JavaScript</span>
+                        <div class="skill-bar">
+                            <span class="skill-per js">
+                                <span class="tooltip">75%</span>
+                            </span>
+                        </div>
                     </div>
-                    <p>PHP</p>
-                    <div class="bar">
-                        <div class="skill-bar php">70%</div>
+                    <div class="skill-box">
+                        <span class="title">PHP</span>
+                        <div class="skill-bar">
+                            <span class="skill-per php">
+                                <span class="tooltip">70%</span>
+                            </span>
+                        </div>
                     </div>
-                    <p>MY SQL</p>
-                    <div class="bar">
-                        <div class="skill-bar mysql">80%</div>
+                    <div class="skill-box">
+                        <span class="title">MY SQL</span>
+                        <div class="skill-bar">
+                            <span class="skill-per mysql">
+                                <span class="tooltip">80%</span>
+                            </span>
+                        </div>
                     </div>
-                    <p>REACT JS</p>
-                    <div class="bar">
-                        <div class="skill-bar reactjs">70%</div>
+                    <div class="skill-box">
+                        <span class="title">REACT JS</span>
+                        <div class="skill-bar">
+                            <span class="skill-per reactjs">
+                                <span class="tooltip">70%</span>
+                            </span>
+                        </div>
                     </div>
-                    <p>NEXT JS</p>
-                    <div class="bar">
-                        <div class="skill-bar nextjs">70%</div>
+                    <div class="skill-box">
+                        <span class="title">NEXT JS</span>
+                        <div class="skill-bar">
+                            <span class="skill-per nextjs">
+                                <span class="tooltip">70%</span>
+                            </span>
+                        </div>
                     </div>
                 </div>
-                <div class="right">
-                    <p>NODE JS</p>
-                    <div class="bar">
-                        <div class="skill-bar nodejs">5%</div>
+                <div class="container" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="skill-box">
+                        <span class="title">NODE JS</span>
+                        <div class="skill-bar">
+                            <span class="skill-per nodejs">
+                                <span class="tooltip">5%</span>
+                            </span>
+                        </div>
                     </div>
-                    <p>FLUTTER</p>
-                    <div class="bar">
-                        <div class="skill-bar flutter">20%</div>
+                    <div class="skill-box">
+                        <span class="title">FLUTTER</span>
+                        <div class="skill-bar">
+                            <span class="skill-per flutter">
+                                <span class="tooltip">20%</span>
+                            </span>
+                        </div>
                     </div>
-                    <p>MICROSOFT EXCEL</p>
-                    <div class="bar">
-                        <div class="skill-bar excel">75%</div>
+                    <div class="skill-box">
+                        <span class="title">EXCEL</span>
+                        <div class="skill-bar">
+                            <span class="skill-per excel">
+                                <span class="tooltip">75%</span>
+                            </span>
+                        </div>
                     </div>
-                    <p>COMMUNICATION</p>
-                    <div class="bar">
-                        <div class="skill-bar communication">90%</div>
+                    <div class="skill-box">
+                        <span class="title">COMMUNICATION</span>
+                        <div class="skill-bar">
+                            <span class="skill-per communication">
+                                <span class="tooltip">90%</span>
+                            </span>
+                        </div>
                     </div>
-                    <p>TEAM SUPPORT</p>
-                    <div class="bar">
-                        <div class="skill-bar team-support">90%</div>
+                    <div class="skill-box">
+                        <span class="title">TEAM SUPPORT</span>
+                        <div class="skill-bar">
+                            <span class="skill-per team-support">
+                                <span class="tooltip">90%</span>
+                            </span>
+                        </div>
                     </div>
-                    <p>PROJECT MANAEGMENT</p>
-                    <div class="bar">
-                        <div class="skill-bar project-management">90%</div>
+                    <div class="skill-box">
+                        <span class="title">PROJECT MANAGEMENT</span>
+                        <div class="skill-bar">
+                            <span class="skill-per project-management">
+                                <span class="tooltip">90%</span>
+                            </span>
+                        </div>
                     </div>
-                    <p>CREATIVITY</p>
-                    <div class="bar">
-                        <div class="skill-bar creativity">80%</div>
+                    <div class="skill-box">
+                        <span class="title">CREATIVITY</span>
+                        <div class="skill-bar">
+                            <span class="skill-per creativity">
+                                <span class="tooltip">80%</span>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -145,8 +203,8 @@
         <!-- skills section end  -->
         <!-- projects section end  -->
         <section id="projects">
-            <h1>My Projects</h1>
-            <div class="swiper projectswiper">
+            <h1 data-aos="fade-down" data-aos-duration="1000">Latest <span class="text-span">Projects</span></h1>
+            <div class="swiper projectswiper" data-aos="fade-up" data-aos-duration="1000">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <img src="images/traditionalitalianfoodrestaurant.jpg" alt="traditionalitalianfoodrestaurant">
@@ -206,28 +264,24 @@
         <!-- projects section start  -->
         <!-- contact section start  -->
         <section id="contact">
-            <h1>Contact Me</h1>
-            <div class="upper">
-                <div class="left">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d912.8101399575985!2d90.43100371664009!3d23.774446600000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1686918147734!5m2!1sen!2sbd"></iframe>
-                </div>
-                <div class="right">
-                    <!-- https://formspree.io/ -->
-                    <form action="https://formspree.io/f/myyarnzy" method="POST" autocomplete="off">
-                        <label for="full-name">You Full Name</label>
-                        <input type="text" name="full-name" id="full-name" placeholder="Enter your full name" required>
-                        <label for="email">Your Email</label>
-                        <input type="email" name="email" id="email" placeholder="Example: abc@gmail.com"
-                            pattern="^[a-zA-Z0-9]+@(gmail|yahoo)\.com$" title="Example: abc@gmail.com" required>
-                        <label for="message">Your Message</label>
-                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Write your messsage"
-                            required></textarea>
+            <h1 data-aos="fade-down" data-aos-duration="1000">Contact <span class="text-span">Me</span></h1>
+            <div class="upper" data-aos="fade-up" data-aos-duration="1000">
+                <!-- https://formspree.io/ -->
+                <form action="https://formspree.io/f/myyarnzy" method="POST" autocomplete="off">
+                    <label for="full-name">You Full Name</label>
+                    <input type="text" name="full-name" id="full-name" placeholder="Enter your full name" maxlength="30" required>
+                    <label for="email">Your Email</label>
+                    <input type="email" name="email" id="email" placeholder="Example: abc@gmail.com"
+                        pattern="^[a-zA-Z0-9]+@(gmail|yahoo)\.com$" title="Example: abc@gmail.com" maxlength="50" required>
+                    <label for="message">Your Message</label>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Write your messsage"
+                        required></textarea>
+                    <div>
                         <button type="submit">Send Message</button>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
-            <h2>Follow me on social media</h2>
+            <h2>Follow me on <span class="text-span"> Social Media</span></h2>
             <div class="lower">
                 <ul>
                     <li><a href="https://www.instagram.com/arafat.akash.akku/" title="instagram" target="_blank"><i
@@ -272,6 +326,9 @@
     <!-- https://github.com/mattboldt/typed.js/ -->
     <!-- animation typed js  -->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- https://michalsnik.github.io/aos/ -->
+    <!-- animate on scroll js  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- swipper js  -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <!-- swipper js source code for swipper content  -->
@@ -297,6 +354,10 @@
             backSpeed: 50,
             loop: true
         });
+    </script>
+    <!-- animate on scroll js  -->
+    <script>
+        AOS.init();
     </script>
 </body>
 
