@@ -1,4 +1,28 @@
-@media screen and (max-width:1350px) {}
+@media screen and (max-width:1300px) {
+
+    #about .lower {
+        flex-direction: column;
+    }
+
+    #about .lower .right {
+        margin-top: 5vh;
+    }
+
+    #about .lower .left,
+    #about .lower .right {
+        width: 100%;
+    }
+
+    #about .lower .left img {
+        width: 30%;
+    }
+
+    #about .lower .right {
+        align-items: center;
+        gap: 3vh;
+    }
+
+}
 
 @media screen and (max-width:980px) {
 
@@ -21,6 +45,11 @@
     a {
         font-size: 15px;
         cursor: pointer;
+    }
+
+    #about .lower .right .about-table .table-list table th,
+    #about .lower .right .about-table .table-list table td {
+        font-size: 14px;
     }
 
 }
@@ -46,12 +75,13 @@
         margin-right: 44px;
     }
 
-    #home{
+    #home {
         flex-direction: column;
         gap: 2vh;
     }
 
-    #home .left, #home .right {
+    #home .left,
+    #home .right {
         width: 100%;
     }
 
@@ -108,6 +138,20 @@
 
 @media screen and (max-width:700px) {
 
+    #about .lower .left img {
+        width: 50%;
+    }
+
+    #edu-exp .list {
+        flex-direction: column;
+        gap: 6vh;
+    }
+
+    #edu-exp .list .education,
+    #edu-exp .list .experience {
+        width: 100%;
+    }
+
     #skills .lower {
         flex-direction: column;
         gap: 0;
@@ -127,8 +171,28 @@
 
 }
 
-@media screen and (max-width:520px) {
+@media screen and (max-width:600px) {
 
+    #about .lower .right h2 {
+        text-align: center;
+    }
+
+    #about .lower .right p {
+        text-align: center;
+    }
+
+    #about .lower .right .about-table {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #about .lower .right .about-table .table-list {
+        width: 100%;
+    }
+
+    #about .lower .right .about-table .table-list:nth-child(1) table td {
+        padding: 5px 0 5px 20px;
+    }
 
 }
 
@@ -168,5 +232,4 @@
 
 }
 
-@media screen and (max-width:270px) {
-}
+@media screen and (max-width:270px) {}

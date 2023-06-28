@@ -17,6 +17,9 @@
     --orange-color: orange;
     --bg-color: #1f242d;
     --second-bg-color: #323946;
+    --green-color: green;
+    --red-color: red;
+    --yellow-color: yellow;
 }
 
 .dark {
@@ -26,6 +29,9 @@
     --orange-color: orange;
     --bg-color: #1f242d;
     --second-bg-color: #323946;
+    --green-color: green;
+    --red-color: red;
+    --yellow-color: yellow;
 }
 
 h1 {
@@ -115,20 +121,15 @@ header .right {
 }
 
 header .right .fa-sun {
-    color: var(--white-color);
+    color: var(--orange-color);
     cursor: pointer;
     font-size: 21px;
 }
 
 header .right .fa-moon {
-    color: var(--white-color);
+    color: var(--orange-color);
     cursor: pointer;
     font-size: 28px;
-}
-
-header .right .fa-sun:hover,
-header .right .fa-moon:hover {
-    color: var(--orange-color);
 }
 
 /* header end  */
@@ -231,13 +232,159 @@ header .right .fa-moon:hover {
 /* home section end */
 
 /* about section start */
+
 #about {
-    height: 200vh;
+    display: flex;
+    flex-direction: column;
+    padding: 8vh 4vw 0;
+    width: 100%;
+}
+
+#about h1 {
+    width: 100%;
+    text-align: center;
+    color: var(--white-color);
+}
+
+#about .lower {
+    margin-top: 6vh;
+    display: flex;
+    flex-direction: row;
+}
+
+#about .lower .left {
+    text-align: center;
+}
+
+#about .lower .left,
+#about .lower .right {
+    width: 50%;
+}
+
+#about .lower .left img {
+    width: 50%;
+    background-color: var(--second-bg-color);
+    border: 1px solid var(--orange-color);
+    box-shadow: 0px 0px 3vh 1vh var(--orange-color);
+}
+
+#about .lower .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5vh;
+}
+
+#about .lower .right h2 {
+    color: var(--white-color);
+}
+
+#about .lower .right p {
+    color: var(--white-color);
+}
+
+#about .lower .right .about-table {
+    color: var(--white-color);
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+}
+
+#about .lower .right .about-table .table-list {
+    width: 50%;
+}
+
+#about .lower .right .about-table .table-list table th,
+#about .lower .right .about-table .table-list table td {
+    font-size: 16px;
+    text-align: left;
+    padding: 5px 6px;
+}
+
+#about .lower .right .about-table .table-list table a {
+    color: var(--white-color);
+}
+
+#about .lower .right .cv-list {
+    text-align: center;
+}
+
+#about .lower .right .cv-list a {
+    padding: 2vh 2vw;
+    background-color: var(--orange-color);
+    color: var(--black-color);
+    border-radius: 10px;
+    font-weight: bolder;
+}
+
+#about .lower .right .cv-list a:hover {
+    box-shadow: 0px 0px 3vh 1vh var(--orange-color);
 }
 
 /* about section end */
 
 /* education section start */
+
+#edu-exp {
+    display: flex;
+    flex-direction: column;
+    padding: 8vh 4vw 0;
+    width: 100%;
+}
+
+#edu-exp h1 {
+    width: 100%;
+    text-align: center;
+    color: var(--white-color);
+}
+
+#edu-exp .list {
+    margin-top: 6vh;
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+}
+
+#edu-exp .list .education,
+#edu-exp .list .experience {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+}
+
+#edu-exp .list .education .education-title,
+#edu-exp .list .experience .experience-title {
+    color: var(--white-color);
+}
+
+#edu-exp .list .education .education-list,
+#edu-exp .list .experience .experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+#edu-exp .list .education .education-list .education-content,
+#edu-exp .list .experience .experience-list .experience-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    background-color: var(--second-bg-color);
+    padding: 2vh 3vw;
+}
+
+#edu-exp .list .education .education-list .education-content h2,
+#edu-exp .list .education .education-list .education-content p,
+#edu-exp .list .experience .experience-list .experience-content h2,
+#edu-exp .list .experience .experience-list .experience-content p {
+    color: var(--white-color);
+}
+
+#edu-exp .list .education .education-list .education-content h3,
+#edu-exp .list .experience .experience-list .experience-content h3 {
+    color: var(--orange-color);
+}
 
 /* education section end */
 
@@ -254,6 +401,10 @@ header .right .fa-moon:hover {
     width: 100%;
     text-align: center;
     color: var(--white-color);
+}
+
+#skills .title {
+    text-transform: uppercase;
 }
 
 #skills .lower {
@@ -533,7 +684,45 @@ header .right .fa-moon:hover {
 #contact .upper form div {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
+    gap: 2vh;
+}
+
+#my-form-success {
+    text-align: center;
+    padding: 1vw 2vh;
+    border-radius: 20px;
+    border: 1px solid var(--green-color);
+    color: var(--white-color);
+    font-weight: bolder;
+    background-color: var(--green-color);
+    box-shadow: 0px 0px 3vh 1vh var(--green-color);
+    display: none;
+}
+
+#my-form-fail {
+    text-align: center;
+    padding: 1vw 2vh;
+    border-radius: 20px;
+    border: 1px solid var(--red-color);
+    color: var(--white-color);
+    font-weight: bolder;
+    background-color: var(--red-color);
+    box-shadow: 0px 0px 3vh 1vh var(--red-color);
+    display: none;
+}
+
+#my-form-status {
+    text-align: center;
+    padding: 1vw 2vh;
+    border-radius: 20px;
+    border: 1px solid var(--red-color);
+    color: var(--white-color);
+    font-weight: bolder;
+    background-color: var(--red-color);
+    box-shadow: 0px 0px 3vh 1vh var(--red-color);
+    display: none;
 }
 
 #contact .upper form button {
@@ -609,7 +798,7 @@ footer a {
     width: 100%;
     height: 6vh;
     padding: 1vh 0;
-    background-color: var(--header-bgcolor);
+    background-color: var(--bg-color);
     position: fixed;
     bottom: 0;
     display: none;

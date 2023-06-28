@@ -26,11 +26,11 @@ window.onscroll = () => {
     // scroll skill bar 
     // if (skills.getBoundingClientRect().top + skills.getBoundingClientRect().height < window.innerHeight) {
     if (skills.getBoundingClientRect().top < window.innerHeight) {
-        skillactive.forEach((element)=>{
+        skillactive.forEach((element) => {
             element.classList.add("active");
         })
     } else {
-        skillactive.forEach((element)=>{
+        skillactive.forEach((element) => {
             element.classList.remove("active");
         })
     }
@@ -53,3 +53,58 @@ yearUpdate.innerHTML = new Date().getFullYear();
 document.oncontextmenu = (element) => {
     element.preventDefault();
 }
+// Formspree form submission 
+const form = document.getElementById("my-form");
+async function handleSubmit(event) {
+    event.preventDefault();
+    let successstatus = document.getElementById("my-form-success");
+    let failstatus = document.getElementById("my-form-fail");
+    let data = new FormData(event.target);
+    let status = document.getElementById("my-form-status");
+    let submitbutton = document.getElementById("submit-button");
+    fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            form.reset()
+            successstatus.style.display = "block";
+            submitbutton.style.display = "none";
+            setTimeout(() => {
+                successstatus.style.display = "none";
+                submitbutton.style.display = "block";
+            }, 5000);
+        } else {
+            response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                    status.style.display = "block";
+                    status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                    submitbutton.style.display = "none";
+                    setInterval(() => {
+                        status.style.display = "none";
+                        submitbutton.style.display = "block";
+                    }, 5000);
+                } else {
+                    form.reset()
+                    failstatus.style.display = "block";
+                    submitbutton.style.display = "none";
+                    setTimeout(() => {
+                        failstatus.style.display = "none";
+                        submitbutton.style.display = "block";
+                    }, 5000);
+                }
+            })
+        }
+    }).catch(error => {
+        failstatus.style.display = "block";
+        submitbutton.style.display = "none";
+        setTimeout(() => {
+            failstatus.style.display = "none";
+            submitbutton.style.display = "block";
+        }, 5000);
+    });
+}
+form.addEventListener("submit", handleSubmit)
