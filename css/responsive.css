@@ -106,9 +106,9 @@
         justify-content: flex-end;
     }
 
-    #home .right img {
+    /* #home .right img {
         width: 100%;
-    }
+    } */
 
     #projects .projectswiper {
         width: 100%;
@@ -127,7 +127,8 @@
     }
 
     footer {
-        margin-bottom: 6vh;
+        margin-bottom: 8vh;
+        margin-top: 3vh;
     }
 
     #mobile-version {
@@ -172,6 +173,18 @@
 }
 
 @media screen and (max-width:600px) {
+
+    #home .left {
+        height: 40%;
+    }
+
+    #home .right {
+        height: 60%;
+    }
+
+    #home .right img {
+        width: 100%;
+    }
 
     #about .lower .right h2 {
         text-align: center;
@@ -218,6 +231,7 @@
         bottom: 0px;
         gap: 5px;
     }
+
 }
 
 @media screen and (max-width:300px) {
@@ -228,6 +242,16 @@
 
     #mobile-version ul li a {
         font-size: 15px;
+    }
+
+    #contact h2 {
+        text-align: center;
+    }
+
+    #contact .lower ul {
+        flex-wrap: wrap;
+        gap: 4vh;
+        justify-content: center;
     }
 
 }

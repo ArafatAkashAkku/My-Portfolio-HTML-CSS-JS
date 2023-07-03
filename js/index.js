@@ -5,6 +5,8 @@ const highlight = document.getElementById("bar-highlight");
 const mobileversion = document.getElementById("mobile-version");
 const skills = document.getElementById("skills");
 const skillactive = document.querySelectorAll("#skills .lower .container .skill-box .skill-bar .skill-per");
+const navLinks = document.querySelectorAll('header .middle nav ul li a');
+const sections = document.querySelectorAll('section');
 // windows scroll function 
 window.onscroll = () => {
     // scroll effect navbar
@@ -34,6 +36,19 @@ window.onscroll = () => {
             element.classList.remove("active");
         })
     }
+    // active class on header link 
+    sections.forEach((sec) => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 150;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
+        if (top >= offset && top < offset + height) {
+            navLinks.forEach((links) => {
+                links.classList.remove('active');
+                document.querySelector('header .middle nav ul li a[href*=' + id + ']').classList.add("active");
+            })
+        }
+    });
 }
 // navigation bar on click effect 
 const darklight = document.getElementById('dark-light');
