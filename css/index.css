@@ -304,6 +304,7 @@ header .right .fa-moon {
 
 #about .lower .right .about-table .table-list table a {
     color: var(--white-color);
+    font-size: 16px;
 }
 
 #about .lower .right .cv-list {
