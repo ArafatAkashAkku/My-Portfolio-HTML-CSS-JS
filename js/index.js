@@ -50,16 +50,22 @@ window.onscroll = () => {
         }
     });
 }
-// navigation bar on click effect 
+// navigation bar dark-light mode on click effect 
 const darklight = document.getElementById('dark-light');
 const phoneNav = document.querySelector('header .middle');
 darklight.onclick = () => {
-    document.body.classList.toggle("dark");
-    if (document.body.classList.contains("dark")) {
-        darklight.classList.replace("fa-moon", "fa-sun");
+    document.body.classList.toggle("light");
+    if (document.body.classList.contains("light")) {
+        darklight.classList.replace("fa-sun", "fa-moon");
+        localStorage.setItem("mode","light");
     } else {
-        darklight.classList.add("fa-moon");
+        darklight.classList.replace("fa-moon", "fa-sun");
+        localStorage.setItem("mode","dark");
     }
+}
+let selectMode = localStorage.getItem("mode");
+if(selectMode=="light"){
+    document.body.classList.add("light");
 }
 // Auto update year 
 const yearUpdate = document.getElementById("update-year");

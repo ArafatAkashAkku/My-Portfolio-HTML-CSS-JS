@@ -106,14 +106,6 @@
         justify-content: flex-end;
     }
 
-    /* #home .right img {
-        width: 100%;
-    } */
-
-    #projects .projectswiper {
-        width: 100%;
-    }
-
     #projects .projectswiper .swiper-slide .demo-link {
         bottom: 1vh;
     }

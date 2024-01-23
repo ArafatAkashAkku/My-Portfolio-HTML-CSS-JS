@@ -10,6 +10,7 @@
     user-select: none;
 }
 
+/* by default mode is dark  */
 :root {
     --white-color: white;
     --black-color: black;
@@ -22,13 +23,13 @@
     --yellow-color: yellow;
 }
 
-.dark {
-    --white-color: white;
-    --black-color: black;
+.light {
+    --white-color: black;
+    --black-color: white;
     --home-picture-opacity: 0.3;
     --orange-color: orange;
-    --bg-color: #1f242d;
-    --second-bg-color: #323946;
+    --bg-color: #f0ffff;
+    --second-bg-color: #ffe4cd;
     --green-color: green;
     --red-color: red;
     --yellow-color: yellow;
@@ -491,12 +492,12 @@ header .right .fa-moon {
 }
 
 #skills .lower .container .skill-box .skill-bar .skill-per.nodejs {
-    width: 5%;
+    width: 65%;
     animation-delay: 0.5s;
 }
 
-#skills .lower .container .skill-box .skill-bar .skill-per.flutter {
-    width: 20%;
+#skills .lower .container .skill-box .skill-bar .skill-per.ajax {
+    width: 75%;
     animation-delay: 0.5s;
 }
 
@@ -566,7 +567,7 @@ header .right .fa-moon {
 /* projects section start */
 
 #projects {
-    padding: 8vh 4vw 0;
+    padding: 8vh 1vw 0;
     width: 100%;
 }
 
@@ -576,9 +577,15 @@ header .right .fa-moon {
     color: var(--white-color);
 }
 
+#projects .projectslidearrow{
+    position: relative!important;
+    width: 100%;
+}
+
 #projects .projectswiper {
     width: 90%;
     margin-top: 6vh;
+    position: static!important;
 }
 
 #projects .projectswiper .swiper-slide {
@@ -604,6 +611,7 @@ header .right .fa-moon {
     align-items: center;
     justify-content: center;
     position: absolute;
+    z-index: 999;
     bottom: 2vh;
 }
 
@@ -621,6 +629,10 @@ header .right .fa-moon {
 
 #projects .projectswiper .swiper-button-next,
 #projects .projectswiper .swiper-button-prev {
+    position: relative;
+}
+
+#projects .swiper-button-prev:after,#projects .swiper-button-next:after {
     color: var(--orange-color);
 }
 
@@ -750,7 +762,7 @@ header .right .fa-moon {
 #contact .lower ul li a {
     padding: 8px 10px;
     border-radius: 50%;
-    color: var(--white-color);
+    color: white;
 }
 
 #contact .lower ul li:nth-child(1) a {
