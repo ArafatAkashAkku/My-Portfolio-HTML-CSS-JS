@@ -389,6 +389,11 @@ header .right .fa-moon {
     color: var(--orange-color);
 }
 
+#edu-exp .list .education .education-list .education-content h5,
+#edu-exp .list .experience .experience-list .experience-content h5 {
+    color: var(--orange-color);
+}
+
 /* education section end */
 
 /* skills section start */
@@ -471,6 +476,11 @@ header .right .fa-moon {
     animation-delay: 0.5s;
 }
 
+#skills .lower .container .skill-box .skill-bar .skill-per.ts {
+    width: 65%;
+    animation-delay: 0.5s;
+}
+
 #skills .lower .container .skill-box .skill-bar .skill-per.php {
     width: 70%;
     animation-delay: 0.5s;
@@ -494,7 +504,12 @@ header .right .fa-moon {
 #skills .lower .container .skill-box .skill-bar .skill-per.nodejs {
     width: 65%;
     animation-delay: 0.5s;
-}
+} 
+
+#skills .lower .container .skill-box .skill-bar .skill-per.reactnative {
+    width: 20%;
+    animation-delay: 0.5s;
+} 
 
 #skills .lower .container .skill-box .skill-bar .skill-per.ajax {
     width: 75%;
@@ -506,23 +521,18 @@ header .right .fa-moon {
     animation-delay: 0.5s;
 }
 
-#skills .lower .container .skill-box .skill-bar .skill-per.communication {
-    width: 90%;
+#skills .lower .container .skill-box .skill-bar .skill-per.mongodb {
+    width: 70%;
     animation-delay: 0.5s;
 }
 
-#skills .lower .container .skill-box .skill-bar .skill-per.team-support {
-    width: 90%;
+#skills .lower .container .skill-box .skill-bar .skill-per.github {
+    width: 70%;
     animation-delay: 0.5s;
 }
 
 #skills .lower .container .skill-box .skill-bar .skill-per.project-management {
     width: 90%;
-    animation-delay: 0.5s;
-}
-
-#skills .lower .container .skill-box .skill-bar .skill-per.creativity {
-    width: 80%;
     animation-delay: 0.5s;
 }
 
