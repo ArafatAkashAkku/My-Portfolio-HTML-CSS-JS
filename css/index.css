@@ -507,7 +507,7 @@ header .right .fa-moon {
 } 
 
 #skills .lower .container .skill-box .skill-bar .skill-per.reactnative {
-    width: 20%;
+    width: 50%;
     animation-delay: 0.5s;
 } 
 
