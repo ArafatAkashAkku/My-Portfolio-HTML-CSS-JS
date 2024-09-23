@@ -142,7 +142,7 @@ const projectswiper = new Swiper(".projectswiper", {
   spaceBetween: 30,
   centeredSlides: true,
   autoplay: {
-    delay: 2500,
+    delay: 5000,
     disableOnInteraction: false,
   },
   navigation: {
@@ -153,11 +153,12 @@ const projectswiper = new Swiper(".projectswiper", {
 // animation typed js
 const typed = new Typed(".animation-text", {
   strings: [
-    "Web Developer",
     "Full Stack Developer",
     "React JS Developer",
     "Next JS Developer",
     "PHP Developer",
+    "Website Developer",
+    "Web App Developer",
     "React Native Developer",
   ],
   typeSpeed: 100,
