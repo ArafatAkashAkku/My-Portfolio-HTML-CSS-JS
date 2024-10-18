@@ -516,8 +516,8 @@ header .right .fa-moon {
     animation-delay: 0.5s;
 }
 
-#skills .lower .container .skill-box .skill-bar .skill-per.excel {
-    width: 75%;
+#skills .lower .container .skill-box .skill-bar .skill-per.sqa {
+    width: 80%;
     animation-delay: 0.5s;
 }
 
@@ -631,6 +631,7 @@ header .right .fa-moon {
     border-radius: 10px;
     color: var(--black-color);
     font-weight: bolder;
+    position: relative;
 }
 
 #projects .projectswiper .swiper-slide .demo-link a:hover {
